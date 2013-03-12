@@ -26,6 +26,11 @@ public class RequestLoader {
   }
   
   public void onLoadingFinish() {
+    if (dialog == null) {
+      Log.d(TAG, "onLoadingFinish called without onLoadingStart");
+      return;
+    }
+
     dialog.hide();
   }
 }
